@@ -1,0 +1,119 @@
+.reviews {
+  box-sizing: border-box;
+  position: relative;
+
+  //@include outline;
+  width: 100%;
+
+  font-size: 15px;
+  line-height: 20px;
+  padding-right: 10px;
+}
+
+.reviews button {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  width: 189px;
+  height: 52px;
+  font-size: 14px;
+  line-height: 19px;
+
+  text-align: center;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.reviews b {
+  padding: 0;
+  margin: 0;
+  font-size: 20px;
+  line-height: 27px;
+  font-weight: 600;
+}
+
+.reviews__proscontras {
+  margin: 0;
+  margin-top: 12px;
+  padding-left: 19px;
+}
+
+.reviews__proscontras dd {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 5px;
+  color: #000000;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.reviews__proscontras dt {
+  margin-bottom: 13px;
+}
+
+.reviews__proscontras dd:nth-of-type(1)::before {
+  position: absolute;
+  content: "+";
+  left: 0;
+
+
+  color: $red;
+}
+
+.reviews__proscontras dd:nth-of-type(2)::before {
+  position: absolute;
+  content: "-";
+  left: 1px;
+
+  color: $red;
+}
+
+.reviews h3 {
+  margin: 0;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 20px;
+  color: #000000;
+}
+
+.reviews p {
+  margin-top: 5px;
+  color: #000000;
+}
+
+.reviews__review {
+  box-sizing: border-box;
+  padding-bottom: 20px;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
+
+.reviews__stars {
+  margin-top: 20px;
+  color: $red;
+}
+
+.reviews__stars img:last-of-type {
+  margin-right: 20px;
+}
+
+.reviews__reply {
+  margin-top: 25px;
+}
+
+.reviews__reply span {
+  font-size: 14px;
+  line-height: 19px;
+  color: #000000;
+  opacity: 0.4;
+}
+
+.reviews__reply a {
+  text-decoration: none;
+  color: $red;
+  margin-left: 25px;
+  font-size: 16px;
+  line-height: 22px;
+}

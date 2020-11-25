@@ -20,6 +20,7 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
+  color: #48494d;
   height: 100%; }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -595,7 +596,8 @@ template {
   display: -ms-flexbox;
   display: flex;
   font-size: 20px;
-  line-height: 27px; }
+  line-height: 27px;
+  margin-bottom: 30px; }
 
 .tabs label {
   width: 194px;
@@ -605,7 +607,106 @@ template {
   width: 100%;
   margin-top: 90px;
   margin-left: 5px;
-  min-height: 550px; }
+  padding-bottom: 140px; }
+
+.reviews {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  font-size: 15px;
+  line-height: 20px;
+  padding-right: 10px; }
+
+.reviews button {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  width: 189px;
+  height: 52px;
+  font-size: 14px;
+  line-height: 19px;
+  text-align: center;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 600; }
+
+.reviews b {
+  padding: 0;
+  margin: 0;
+  font-size: 20px;
+  line-height: 27px;
+  font-weight: 600; }
+
+.reviews__proscontras {
+  margin: 0;
+  margin-top: 12px;
+  padding-left: 19px; }
+
+.reviews__proscontras dd {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 5px;
+  color: #000000;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 20px; }
+
+.reviews__proscontras dt {
+  margin-bottom: 13px; }
+
+.reviews__proscontras dd:nth-of-type(1)::before {
+  position: absolute;
+  content: "+";
+  left: 0;
+  color: #d12136; }
+
+.reviews__proscontras dd:nth-of-type(2)::before {
+  position: absolute;
+  content: "-";
+  left: 1px;
+  color: #d12136; }
+
+.reviews h3 {
+  margin: 0;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 20px;
+  color: #000000; }
+
+.reviews p {
+  margin-top: 5px;
+  color: #000000; }
+
+.reviews__review {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-bottom: 20px;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px; }
+
+.reviews__stars {
+  margin-top: 20px;
+  color: #d12136; }
+
+.reviews__stars img:last-of-type {
+  margin-right: 20px; }
+
+.reviews__reply {
+  margin-top: 25px; }
+
+.reviews__reply span {
+  font-size: 14px;
+  line-height: 19px;
+  color: #000000;
+  opacity: 0.4; }
+
+.reviews__reply a {
+  text-decoration: none;
+  color: #d12136;
+  margin-left: 25px;
+  font-size: 16px;
+  line-height: 22px; }
 
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
@@ -687,5 +788,8 @@ input:checked + .button--radio {
   line-height: 22px;
   color: #48494d;
   text-decoration: none; }
+
+.footer__nav a:hover {
+  opacity: 0.7; }
 
 /*# sourceMappingURL=style.css.map */
