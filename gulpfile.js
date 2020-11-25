@@ -29,6 +29,17 @@ gulp.task("css", function () {
     .pipe(server.stream());
 });
 
+gulp.task("css-nomin", function () {
+  return gulp.src("source/sass/style.scss")
+    .pipe(plumber())
+    .pipe(sourcemap.init())
+    .pipe(sass())
+    .pipe(postcss([ autoprefixer() ]))
+    .pipe(rename("style.css"))
+    .pipe(sourcemap.write("."))
+    .pipe(gulp.dest("build/css"))
+});
+
 gulp.task("server", function () {
   server.init({
     server: "build/",
@@ -38,7 +49,7 @@ gulp.task("server", function () {
     ui: false
   });
 
-  gulp.watch("source/sass/**/*.{scss,sass}", gulp.series("css"));
+  gulp.watch("source/sass/**/*.{scss,sass}", gulp.series("css", "css-nomin"));
   gulp.watch("source/img/icon-*.svg", gulp.series("sprite", "html", "refresh"));
   gulp.watch("source/*.html", gulp.series("html", "refresh"));
 });
