@@ -1,0 +1,33 @@
+.contacts {
+  width: 100%;
+  display: flex;
+}
+
+.contacts__list {
+  margin: 0;
+  width: 274px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.contacts img {
+  margin-left: 74px;
+}
+
+.contacts__list dd {
+  margin: 0;
+  color: #1a212f;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.contacts__list dt {
+  margin: 0;
+  color: #000000;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  margin-bottom: 10px;
+}
