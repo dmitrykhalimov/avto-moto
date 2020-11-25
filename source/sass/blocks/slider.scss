@@ -1,0 +1,37 @@
+.slider {
+  //@include outline;
+  width: 600px;
+}
+
+.slider__main {
+  margin-bottom: 35px;
+}
+
+.slider span {
+  position: absolute;
+  width: 122px;
+  height: 30px;
+
+  font-size: 10px;
+  line-height: 14px;
+
+  text-transform: uppercase;
+}
+
+.slider__thumbnails {
+  display: flex;
+  width: 435px;
+  justify-content: space-between;
+}
+
+.slider__thumbnails-block {
+  display: flex;
+  justify-content: space-between;
+}
+
+.slider__thumbnails-block button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
