@@ -1,6 +1,7 @@
 .slider {
-  //@include outline;
+  @include outline;
   width: 600px;
+  margin-top: 15px;
 }
 
 .slider__main {

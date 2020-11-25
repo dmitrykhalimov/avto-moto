@@ -1,0 +1,145 @@
+.details {
+  // @include outline(purple);
+  min-width: 500px;
+  margin-left: 57px;
+}
+
+.details h3 {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 41px;
+  color: $black;
+}
+
+.details__chars-list {
+  @include list-reset;
+  display: flex;
+  color: $black;
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+
+  text-align: center;
+
+  margin-top: 22px;
+}
+
+.details__char {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  text-align: center;
+  min-width: 70px;
+  height: 61px;
+  opacity: 0.5;
+  margin-right: 8px;
+}
+
+.details__char::before {
+  position: absolute;
+  content: "";
+  left: 20%;
+}
+
+.details__char--fuel::before {
+  top: 0;
+
+  width: 40px;
+  height: 40px;
+  background: url("../../img/icon-engine.svg");
+}
+
+.details__char--transmission::before {
+  top: 0;
+  width: 40px;
+  height: 40px;
+  background: url("../../img/icon-transmission.svg");
+}
+
+.details__char--power::before {
+  top: 0;
+  width: 40px;
+  height: 40px;
+  background: url("../../img/icon-power.svg");
+}
+
+.details__char--engine::before {
+  top: 0;
+  width: 40px;
+  height: 40px;
+  background: url("../../img/icon-volume.svg");
+}
+
+.details__prices {
+  margin-top: 35px;
+}
+
+.details__prices span:nth-child(1) {
+
+  display: inline-block;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  font-size: 35px;
+  line-height: 48px;
+  color: $black;
+  margin-top: 1px;
+}
+
+.details__prices span:nth-child(2) {
+  position: relative;
+  vertical-align: top;
+  display: inline-block;
+  font-family: "Open Sans", sans-serif;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 27px;
+  color: $black;
+  opacity: 0.5;
+  margin-left: 31px;
+  margin-top: 12px;
+}
+
+.details__prices span:nth-child(2)::before {
+  position: absolute;
+  content: "";
+  top: 13px;
+  left: -5px;
+  width: 123px;
+  height: 1px;
+  transform: rotate(-5deg);
+  background-color: gray;
+}
+
+.details__ask {
+  width: 196px;
+  height: 52px;
+
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-top: 37px;
+}
+
+.details__credit {
+  width: 222px;
+  height: 52px;
+
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+
+  margin-top: 15px;
+}

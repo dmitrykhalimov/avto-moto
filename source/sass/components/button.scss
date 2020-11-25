@@ -5,10 +5,18 @@
   justify-content: center; // horizontally centers single line items
   text-align: center;
 
+  border: none;
+  background: none;
   font-family: "Open Sans", sans-serif;
 }
 
 .button--red {
   color: $white;
   background-color: $red;
+}
+
+.button--white {
+  color: $red;
+  background-color: $white;
+  border: 2px solid $red;
 }
