@@ -1,0 +1,11 @@
+.tabs {
+  @include list-reset;
+  display: flex;
+  font-size: 20px;
+  line-height: 27px;
+}
+
+.tabs label {
+  width: 194px;
+  height: 50px;
+}

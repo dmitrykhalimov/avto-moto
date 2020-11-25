@@ -3,5 +3,7 @@
 }
 
 .page__main--container {
+  // @include outline(green);
   display: flex;
+  flex-wrap: wrap;
 }

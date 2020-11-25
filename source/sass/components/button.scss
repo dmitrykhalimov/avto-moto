@@ -20,3 +20,15 @@
   background-color: $white;
   border: 2px solid $red;
 }
+
+.button--radio {
+  color: $red;
+  background-color: $white;
+  border: 1px solid $gray-border;
+}
+
+input:checked + .button--radio {
+  color: $white;
+  background-color: $red;
+  border-color: $red;
+}
