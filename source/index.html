@@ -117,7 +117,7 @@
             <label class="button button--radio" for="contacts">Контакты</label>
           </li>
         </ul>
-        <section class="chars visually-hidden">
+        <section class="chars">
           <dl class="chars__list">
             <dd>Трансмиссия</dd>
             <dt>Роботизированная</dt>
@@ -135,7 +135,7 @@
             <dt>4</dt>
           </dl>
         </section>
-        <section class="reviews">
+        <section class="reviews visually-hidden">
           <button class="button button--white">Оставить отзыв</button>
           <article class="reviews__review">
             <b>Борис Иванов</b>
@@ -246,19 +246,19 @@
               <label for="chars">
                 <img src="./img/icon-star-big.svg" alt="" width="27" height="27">
               </label>
-              <input class="visually-hidden" type="radio" name="stars" id="1-star" checked>
+              <input class="visually-hidden" type="radio" name="stars" id="2-star" checked>
               <label for="chars">
                 <img src="./img/icon-star-big.svg" alt="" width="27" height="27">
               </label>
-              <input class="visually-hidden" type="radio" name="stars" id="1-star" checked>
+              <input class="visually-hidden" type="radio" name="stars" id="3-star" checked>
               <label for="chars">
                 <img src="./img/icon-star-big.svg" alt="" width="27" height="27">
               </label>
-              <input class="visually-hidden" type="radio" name="stars" id="1-star" checked>
+              <input class="visually-hidden" type="radio" name="stars" id="4-star" checked>
               <label for="chars">
                 <img src="./img/icon-star-big.svg" alt="" width="27" height="27">
               </label>
-              <input class="visually-hidden" type="radio" name="stars" id="1-star" checked>
+              <input class="visually-hidden" type="radio" name="stars" id="5-star" checked>
               <label for="chars">
                 <img src="./img/icon-star-big.svg" alt="" width="27" height="27">
               </label>
@@ -273,6 +273,7 @@
       </form>
     </div>
   </section>
+  <script src="js/tabs.js"></script>
   <script>
 		var galleryThumbs = new Swiper('.gallery-thumbs', {
       slidesPerView: 4,
