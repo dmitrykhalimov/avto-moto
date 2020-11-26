@@ -6,6 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Стартовый шаблон</title>
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+
 </head>
 <body class="page">
   <header class="header">
@@ -32,22 +35,43 @@
   <main class="page__main">
     <div class="container page__main--container">
       <section class="slider">
-        <div class="slider__main">
-          <span class="button button--red">New Model</span>
-          <img src="img/slide1-@1x.jpg">
+        <div class="swiper-container gallery-top slider__main">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <span class="button button--red">New Model</span>
+              <img src="img/slide1-@1x.jpg">
+            </div>
+            <div class="swiper-slide">
+              <span class="button button--red">New Model</span>
+              <img src="img/slide2-@1x.jpg">
+            </div>
+            <div class="swiper-slide">
+              <span class="button button--red">New Model</span>
+              <img src="img/slide3-@1x.jpg">
+            </div>
+          </div>
         </div>
-        <div class="slider__thumbnails-block">
+        <div class="swiper-container gallery-thumbs slider__thumbnails-block">
           <button class="slider__prev">
-            <!-- временное решение, при оживлении заменить на векторный спрайт -->
-            <img src="img/icon-left.svg" width="52" height="52">
+            <svg width="52" height="52">
+              <use xlink:href="img/sprite.svg#icon-slider"></use>
+            </svg>
           </button>
           <div class="slider__thumbnails">
-            <img src="img/slide1-tn.jpg" width="128" height="80">
-            <img src="img/slide2-tn.jpg" width="128" height="80">
-            <img src="img/slide3-tn.jpg" width="128" height="80">
+            <div class="swiper-slide">
+              <img src="img/slide1-tn.jpg" width="128" height="80">
+            </div>
+            <div class="swiper-slide">
+              <img src="img/slide2-tn.jpg" width="128" height="80">
+            </div>
+            <div class="swiper-slide">
+              <img src="img/slide3-tn.jpg" width="128" height="80">
+            </div>
           </div>
           <button class="slider__next">
-            <img src="img/icon-right.svg" width="52" height="52">
+            <svg width="52" height="52">
+              <use xlink:href="img/sprite.svg#icon-slider"></use>
+            </svg>
           </button>
         </div>
       </section>
@@ -249,5 +273,25 @@
       </form>
     </div>
   </section>
+  <script>
+		var galleryThumbs = new Swiper('.gallery-thumbs', {
+      slidesPerView: 4,
+      freeMode: false,
+      watchSlidesVisibility: true,
+      watchSlidesProgress: true,
+      wrapperClass: "slider__thumbnails"
+    });
+    var galleryTop = new Swiper('.gallery-top', {
+      spaceBetween: 10,
+      navigation: {
+        nextEl: '.slider__next',
+        prevEl: '.slider__prev',
+        disabledClass: 'slider__disabled',
+      },
+      thumbs: {
+        swiper: galleryThumbs
+      }
+    });
+	</script>
 </body>
 </html>
