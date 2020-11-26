@@ -111,7 +111,7 @@
             <dt>4</dt>
           </dl>
         </section>
-        <section class="reviews visually-hidden">
+        <section class="reviews">
           <button class="button button--white">Оставить отзыв</button>
           <article class="reviews__review">
             <b>Борис Иванов</b>
@@ -160,7 +160,7 @@
             </div>
           </article>
         </section>
-        <section class="contacts">
+        <section class="contacts visually-hidden">
           <dl class="contacts__list">
             <dd>Адрес</dd>
             <dt>Санкт-Петербург, набережная реки Карповки, дом 5</dt>
@@ -203,5 +203,51 @@
       </ul>
     </div>
   </footer>
+  <section class="modal">
+    <div class="modal__container">
+      <h2>Оставить отзыв</h2>
+      <button class="modal__close"></button>
+      <form class="modal__form" method="post">
+        <fieldset>
+          <div class="modal__required">
+            <span>Пожалуйста, заполните поле</span>
+            <input class="modal__required" type="text" name="name" id="name" placeholder="Имя">
+          </div>
+          <input type="text" name="pros" id="pros" placeholder="Достоинства">
+          <input type="text" name="contras" id="contras" placeholder="Недостатки">
+          <div class="modal__value">
+            <span>Оцените товар:</span>
+            <fieldset class="modal__stars">
+              <input class="visually-hidden" type="radio" name="stars" id="1-star" checked>
+              <label for="chars">
+                <img src="./img/icon-star-big.svg" alt="" width="27" height="27">
+              </label>
+              <input class="visually-hidden" type="radio" name="stars" id="1-star" checked>
+              <label for="chars">
+                <img src="./img/icon-star-big.svg" alt="" width="27" height="27">
+              </label>
+              <input class="visually-hidden" type="radio" name="stars" id="1-star" checked>
+              <label for="chars">
+                <img src="./img/icon-star-big.svg" alt="" width="27" height="27">
+              </label>
+              <input class="visually-hidden" type="radio" name="stars" id="1-star" checked>
+              <label for="chars">
+                <img src="./img/icon-star-big.svg" alt="" width="27" height="27">
+              </label>
+              <input class="visually-hidden" type="radio" name="stars" id="1-star" checked>
+              <label for="chars">
+                <img src="./img/icon-star-big.svg" alt="" width="27" height="27">
+              </label>
+            </fieldset>
+          </div>
+          <div class="modal__required">
+            <!-- <span>Пожалуйста, заполните поле</span> -->
+            <textarea placeholder="Комментарий" name="comment" id="comment"></textarea>
+          </div>
+        </fieldset>
+        <button class="modal__submit button button--red">Оставить отзыв</button>
+      </form>
+    </div>
+  </section>
 </body>
 </html>

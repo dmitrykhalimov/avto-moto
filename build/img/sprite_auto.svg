@@ -1,4 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="icon-engine" viewBox="0 0 40 40">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="icon-close" viewBox="0 0 15 16">
+<path d="M13.6399 15.0096L7.50482 8.86495L1.36977 15.0096L0 13.6399L6.14469 7.50482L0 1.36978L1.36977 0L7.50482 6.14469L13.6399 0.00964652L15 1.36978L8.86495 7.50482L15 13.6399L13.6399 15.0096Z" fill="#9F9E9E"/>
+</symbol><symbol id="icon-engine" viewBox="0 0 40 40">
 <g opacity="0.5">
 <rect x="11.746" y="9.75" width="10.9495" height="19.9131" rx="1.25" stroke="#48494D" stroke-width="1.5"/>
 <mask id="path-2-inside-1" fill="white">
@@ -19,6 +21,8 @@
 </symbol><symbol id="icon-right" viewBox="0 0 52 52">
 <path d="M0.500408 26C0.500408 40.0834 11.9143 51.5 25.9939 51.5C40.0734 51.5 51.4873 40.0834 51.4873 26C51.4873 11.9166 40.0734 0.5 25.9939 0.5C11.9143 0.5 0.500408 11.9166 0.500408 26Z" fill="white" stroke="#D7D9DF"/>
 <path d="M34.9873 26.1719L29.0747 20.3686M34.9873 26.1719L29.3001 31.9692M34.9873 26.1719L16.0151 26.3513" stroke="#48494D"/>
+</symbol><symbol id="icon-star-big" viewBox="0 0 26 25">
+<path d="M13.0561 0L16.1024 9.52282H25.9607L17.9852 15.4082L21.0316 24.9311L13.0561 19.0456L5.08054 24.9311L8.12692 15.4082L0.151406 9.52282H10.0097L13.0561 0Z" fill="#BDBEC2" fill-opacity="0.7"/>
 </symbol><symbol id="icon-star-gray" viewBox="0 0 17 16">
 <path d="M8.63145 0L10.5103 5.87336L16.5906 5.87336L11.6716 9.50329L13.5505 15.3766L8.63145 11.7467L3.71242 15.3766L5.59132 9.50329L0.672291 5.87336L6.75254 5.87336L8.63145 0Z" fill="#BDBEC2" fill-opacity="0.7"/>
 </symbol><symbol id="icon-star-red" viewBox="0 0 17 16">
