@@ -860,7 +860,8 @@ input:checked + .button--radio {
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(189, 190, 194, 0.7); }
+  background-color: rgba(189, 190, 194, 0.7);
+  z-index: 1; }
 
 .modal fieldset {
   -webkit-box-sizing: border-box;
@@ -900,6 +901,12 @@ input:checked + .button--radio {
 .modal__form {
   margin-top: 47px; }
 
+.modal__star {
+  fill: #BDBEC2; }
+
+.modal__star--selected {
+  fill: #D12136; }
+
 .modal span {
   margin-right: 10px;
   padding-top: 5px;
@@ -916,7 +923,9 @@ input:checked + .button--radio {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  width: 167px; }
+  width: 167px;
+  height: 30px;
+  margin-bottom: 0; }
 
 .modal__stars input:checked {
   background: coral; }
