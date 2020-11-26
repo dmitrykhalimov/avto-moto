@@ -1,12 +1,19 @@
 'use strict';
 
 (function () {
-  var starsField = document.querySelector('.modal__stars');
-  var starLabels = starsField.querySelectorAll('label');
   var state = {
-    selectedStar: 0,
+    selectedStar: 3,
     hoveredStar: 0,
   };
+
+  var modal = document.querySelector('.modal');
+  var starsField = document.querySelector('.modal__stars');
+  var starLabels = starsField.querySelectorAll('label');
+
+  var nameField = document.querySelector('#name');
+  var prosField = document.querySelector('#pros');
+  var contrasField = document.querySelector('#contras');
+  var commentField = document.querySelector('#comment');
 
   var findStar = function (currentLabel) {
     return [].findIndex.call(starLabels, function (label) {
@@ -40,6 +47,24 @@
     state.selectedStar = findStar(evt.currentTarget);
   };
 
+  var onFormSubmit = function (evt) {
+    evt.preventDefault();
+    var content = document.querySelector('.reviews');
+
+    var dataToRender = {
+      name: nameField.value,
+      pros: prosField.value,
+      contras: contrasField.value,
+      comment: commentField.value,
+      stars: state.selectedStar,
+    };
+
+    var newReview = window.generateReview.create(dataToRender);
+    content.insertBefore(newReview, content.firstElementChild);
+
+    closeModal();
+  };
+
   var onFormExit = function () {
     cleanStars();
     drawStars(state.selectedStar);
@@ -55,14 +80,37 @@
     label.addEventListener('click', onStarSelect);
   };
 
+  var submitButton = document.querySelector('.modal__submit');
+
   starsField.addEventListener('mouseleave', onFormExit);
   starsField.addEventListener('mouseenter', onFormEnter);
+  submitButton.addEventListener('click', onFormSubmit);
 
   for (var i = 0; i < starLabels.length; i++) {
     handleLabelHover(starLabels[i]);
   }
 
-  var content = document.querySelector('.reviews');
-  var newReview = window.generateReview.create();
-  content.insertBefore(newReview, content.lastElementChild.nextSibling);
+  var onOpenModal = function () {
+    modal.classList.remove('visually-hidden');
+  };
+
+  var onCloseButtonClick = function () {
+    closeModal();
+  };
+
+  var closeModal = function () {
+    modal.classList.add('visually-hidden');
+
+    nameField.value = '';
+    prosField.value = '';
+    contrasField.value = '';
+    commentField.value = '';
+  };
+
+  var openButton = document.querySelector('.reviews__add-review');
+  openButton.addEventListener('click', onOpenModal);
+
+  var closeButton = modal.querySelector('.modal__close');
+  closeButton.addEventListener('click', onCloseButtonClick);
+
 })();
