@@ -4,20 +4,25 @@
 (function () {
   var myMap;
 
-  ymaps.ready(init);
+  window.ymaps.ready(init);
 
   function init() {
-    console.log(ymaps);
-    // Создание экземпляра карты и его привязка к контейнеру с
-    // заданным id ("map").
-    myMap = new ymaps.Map('map', {
-      // При инициализации карты обязательно нужно указать
-      // её центр и коэффициент масштабирования.
-      center: [55.76, 37.64], // Москва
-      zoom: 10
+    // инициализация карты
+    myMap = new window.ymaps.Map('map', {
+      center: [59.968137, 30.316263],
+      zoom: 15,
+      controls: []
     }, {
       searchControlProvider: 'yandex#search'
     });
+
+    // метка
+    var point = new window.ymaps.Placemark([59.968137, 30.316263], {
+      balloonContent: 'Изумительный салон Avto-Moto: Санкт-Петербург, набережная реки Карповки, дом 5'
+    }, {
+      preset: 'islands#darkOrangeDotIcon'
+    });
+    myMap.geoObjects.add(point);
   }
 })();
 
