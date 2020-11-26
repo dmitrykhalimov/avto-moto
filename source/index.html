@@ -117,7 +117,7 @@
             <label class="button button--radio" for="contacts">Контакты</label>
           </li>
         </ul>
-        <section class="chars">
+        <section class="chars visually-hidden">
           <dl class="chars__list">
             <dd>Трансмиссия</dd>
             <dt>Роботизированная</dt>
@@ -135,7 +135,7 @@
             <dt>4</dt>
           </dl>
         </section>
-        <section class="reviews visually-hidden">
+        <section class="reviews">
           <button class="button button--white">Оставить отзыв</button>
           <article class="reviews__review">
             <b>Борис Иванов</b>
@@ -285,9 +285,34 @@
       </form>
     </div>
   </section>
-
+  <template id="tempalte-review">
+    <article class="reviews__review">
+      <b></b>
+      <dl class="reviews__proscontras">
+        <dd>Достоинства</dd>
+        <dt></dt>
+        <dd>Недостатки</dd>
+        <dt></dt>
+      </dl>
+      <h3>Комментарий</h3>
+      <p></p>
+      <div class="reviews__stars">
+        <img src="./img/icon-star-red.svg" alt="" width="17" height="17">
+        <img src="./img/icon-star-red.svg" alt="" width="17" height="17">
+        <img src="./img/icon-star-red.svg" alt="" width="17" height="17">
+        <img src="./img/icon-star-gray.svg" alt="" width="17" height="17">
+        <img src="./img/icon-star-gray.svg" alt="" width="17" height="17">
+        <span>Советует</span>
+      </div>
+      <div class="reviews__reply">
+        <span>1 минуту назад</span>
+        <a href="#">Ответить</a>
+      </div>
+    </article>
+  </template>
   <script src="js/map.js" type="text/javascript"></script>
   <script src="js/tabs.js"></script>
+  <script src="js/generate-review.js"></script>
   <script src="js/modal.js"></script>
   <script>
 		var galleryThumbs = new Swiper('.gallery-thumbs', {

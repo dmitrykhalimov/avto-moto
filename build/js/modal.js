@@ -62,4 +62,7 @@
     handleLabelHover(starLabels[i]);
   }
 
+  var content = document.querySelector('.reviews');
+  var newReview = window.generateReview.create();
+  content.insertBefore(newReview, content.lastElementChild.nextSibling);
 })();
