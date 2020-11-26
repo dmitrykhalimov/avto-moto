@@ -2,13 +2,7 @@
 
 (function () {
   var reviewTemplate = document.querySelector('#tempalte-review').content;
-  var mockData = {
-    name: 'Иван Пупко',
-    pros: 'Быстрая, sassy',
-    contras: 'Дорогая, Бензина много',
-    comment: 'Тачан супер за певандриком ездить',
-    stars: 1,
-  };
+
 
   var createReview = function (reviewData) {
     var review = reviewTemplate.cloneNode(true);
