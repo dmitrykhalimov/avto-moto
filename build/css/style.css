@@ -1000,6 +1000,9 @@ template {
 .slider__thumbnails img {
   cursor: pointer; }
 
+.slider__thumbnails img:hover {
+  opacity: 0.7; }
+
 .slider__thumbnails-block {
   display: -webkit-box;
   display: -ms-flexbox;
