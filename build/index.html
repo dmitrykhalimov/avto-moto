@@ -3,12 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Салон Авто-мото">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Стартовый шаблон</title>
+  <title>Карточка автомобиля "Авто-мото"</title>
   <link rel="stylesheet" href="css/style.min.css">
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-  <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
-  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=643b0807-f723-4929-ac4c-fe63dcdadbf4" type="text/javascript"></script>
+
+  <link href="fonts/OpenSans-Bold.woff2" as="font" rel="preload" crossorigin="anonymous">
+  <link href="fonts/OpenSans-Regular.woff2" as="font" rel="preload" crossorigin="anonymous">
+  <link href="fonts/OpenSans-SemiBold.woff2" as="font" rel="preload" crossorigin="anonymous">
 </head>
 <body class="page">
   <header class="header">
@@ -39,15 +41,27 @@
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <span class="button button--red">New Model</span>
-              <img src="img/slide1-@1x.jpg">
+              <picture>
+                <source type="image/webp" srcset="img/slide1-@1x.webp">
+
+                <img src="img/slide1-@1x.jpg" alt="Марпех 11 фото" width="600" height="375">
+              </picture>
             </div>
             <div class="swiper-slide">
               <span class="button button--red">New Model</span>
-              <img src="img/slide2-@1x.jpg">
+              <picture>
+                <source type="image/webp" srcset="img/slide2-@1x.webp">
+
+                <img src="img/slide2-@1x.jpg" alt="Марпех 11 фото" width="600" height="375">
+              </picture>
             </div>
             <div class="swiper-slide">
               <span class="button button--red">New Model</span>
-              <img src="img/slide3-@1x.jpg">
+              <picture>
+                <source type="image/webp" srcset="img/slide3-@1x.webp">
+
+                <img src="img/slide3-@1x.jpg" alt="Марпех 11 фото" width="600" height="375">
+              </picture>
             </div>
           </div>
         </div>
@@ -148,11 +162,11 @@
             <h3>Комментарий</h3>
             <p>Взяли по трейд-ин, на выгодных условиях у дилера. Стильная внешка и крут по базовым характеристикам. Не думал, что пересяду на китайский автопром, но сейчас гоняю и понимаю, что полностью доволен.</p>
             <div class="reviews__stars">
-              <img src="./img/icon-star-red.svg" alt="" width="17" height="17">
-              <img src="./img/icon-star-red.svg" alt="" width="17" height="17">
-              <img src="./img/icon-star-red.svg" alt="" width="17" height="17">
-              <img src="./img/icon-star-gray.svg" alt="" width="17" height="17">
-              <img src="./img/icon-star-gray.svg" alt="" width="17" height="17">
+              <img src="./img/icon-star-red.svg" width="17" height="17">
+              <img src="./img/icon-star-red.svg" width="17" height="17">
+              <img src="./img/icon-star-red.svg" width="17" height="17">
+              <img src="./img/icon-star-gray.svg" width="17" height="17">
+              <img src="./img/icon-star-gray.svg" width="17" height="17">
               <span>Советует</span>
             </div>
             <div class="reviews__reply">
@@ -171,11 +185,11 @@
             <h3>Комментарий</h3>
             <p>Дизайн отличный, управление просто шикарно, ощущения за рулём такой машины особые. Но ремонт очень дорогой. Пару месяцев назад пришлось менять двигатель. По стоимости вышло как новый автомобиль. Так что, если покупать эту машину, надо быть готовым к большим расходам на обслуживание.</p>
             <div class="reviews__stars">
-              <img src="./img/icon-star-red.svg" alt="" width="17" height="17">
-              <img src="./img/icon-star-red.svg" alt="" width="17" height="17">
-              <img src="./img/icon-star-red.svg" alt="" width="17" height="17">
-              <img src="./img/icon-star-gray.svg" alt="" width="17" height="17">
-              <img src="./img/icon-star-gray.svg" alt="" width="17" height="17">
+              <img src="./img/icon-star-red.svg" width="17" height="17">
+              <img src="./img/icon-star-red.svg" width="17" height="17">
+              <img src="./img/icon-star-red.svg" width="17" height="17">
+              <img src="./img/icon-star-gray.svg" width="17" height="17">
+              <img src="./img/icon-star-gray.svg" width="17" height="17">
               <span>Советует</span>
             </div>
             <div class="reviews__reply">
@@ -297,11 +311,11 @@
       <h3>Комментарий</h3>
       <p></p>
       <div class="reviews__stars">
-        <img src="./img/icon-star-red.svg" alt="" width="17" height="17">
-        <img src="./img/icon-star-red.svg" alt="" width="17" height="17">
-        <img src="./img/icon-star-red.svg" alt="" width="17" height="17">
-        <img src="./img/icon-star-gray.svg" alt="" width="17" height="17">
-        <img src="./img/icon-star-gray.svg" alt="" width="17" height="17">
+        <img src="./img/icon-star-red.svg" width="17" height="17">
+        <img src="./img/icon-star-red.svg" width="17" height="17">
+        <img src="./img/icon-star-red.svg" width="17" height="17">
+        <img src="./img/icon-star-gray.svg" width="17" height="17">
+        <img src="./img/icon-star-gray.svg" width="17" height="17">
         <span>Советует</span>
       </div>
       <div class="reviews__reply">
@@ -310,6 +324,8 @@
       </div>
     </article>
   </template>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=643b0807-f723-4929-ac4c-fe63dcdadbf4" type="text/javascript"></script>
+  <script src="js/vendors.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
