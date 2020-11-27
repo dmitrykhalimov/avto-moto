@@ -107,8 +107,8 @@
   position: relative;
 }
 
-.modal__input-required:invalid {
-  outline: 2px solid green;
+.modal__input--invalid {
+  outline: 1px solid #ff0000;
 }
 
 .modal__required::before {

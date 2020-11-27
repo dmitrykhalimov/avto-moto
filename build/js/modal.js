@@ -51,6 +51,11 @@
 
   var onFormSubmit = function (evt) {
     evt.preventDefault();
+
+    if (!checkValidityAll()) {
+      return;
+    }
+
     var content = document.querySelector('.reviews');
     var dataToRender = {
       name: nameField.value,
@@ -92,11 +97,32 @@
   }
 
   // Валидация формы
+  // написал кастомную, т.к. не нравится срабатывание :focus:invalid при первом фокусе на required-input
 
-  var testedInput = document.querySelector('.modal__input-required');
-  console.log(testedInput);
-  testedInput.value = 'Пипкин';
-  console.log(testedInput.validity);
+  var requiredContainers = document.querySelectorAll('.modal__required');
+  var checkValidityAll = function () {
+    var isValid = true;
+    [].forEach.call(requiredContainers, function (container) {
+      if (!isInputValid(container)) {
+        isValid = false;
+      }
+    });
+    return isValid;
+  };
+
+  var isInputValid = function (container) {
+    var testedInput = container.querySelector('.modal__input');
+
+    if (!testedInput.validity.valid) {
+      container.querySelector('span').classList.remove('visually-hidden');
+      testedInput.classList.add('modal__input--invalid');
+      return false;
+    }
+
+    container.querySelector('span').classList.add('visually-hidden');
+    testedInput.classList.remove('modal__input--invalid');
+    return true;
+  };
 
   // функции открытия-закрытия модального окна
   var closeModal = function (isFinished) {
@@ -127,6 +153,8 @@
     closeButton.addEventListener('click', onCloseButtonClick);
     modal.addEventListener('click', onOverlayClick);
     document.addEventListener('keydown', onEscKeyDown);
+
+    modal.querySelector('input').focus();
   };
 
   // обработчики открытия-закрытия формы

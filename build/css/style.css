@@ -617,7 +617,11 @@ template {
   display: flex;
   font-size: 20px;
   line-height: 27px;
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none; }
 
 .tabs label {
   width: 194px;
@@ -950,8 +954,8 @@ input:checked + .button--radio {
 .modal__required {
   position: relative; }
 
-.modal__input-required:invalid {
-  outline: 2px solid green; }
+.modal__input--invalid {
+  outline: 1px solid #ff0000; }
 
 .modal__required::before {
   position: absolute;
