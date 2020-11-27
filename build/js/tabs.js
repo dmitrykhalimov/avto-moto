@@ -28,6 +28,7 @@
   };
 
   var onTabClick = function (evt) {
+    console.log(evt.currentTarget);
     changeContent(evt.target.id);
   };
 

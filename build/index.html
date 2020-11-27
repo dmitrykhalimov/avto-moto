@@ -105,11 +105,11 @@
       <section class="content">
         <ul class="tabs">
           <li>
-            <input class="visually-hidden" type="radio" name="category" id="chars" checked="">
+            <input class="visually-hidden" type="radio" name="category" id="chars">
             <label class="button button--radio" for="chars">Характеристики</label>
           </li>
           <li>
-            <input class="visually-hidden" type="radio" name="category" id="reviews">
+            <input class="visually-hidden" type="radio" name="category" id="reviews" checked="">
             <label class="button button--radio" for="reviews">Отзывы</label>
           </li>
           <li>
@@ -245,31 +245,31 @@
             <span>Оцените товар:</span>
             <fieldset class="modal__stars">
               <input class="visually-hidden" type="radio" name="stars" id="1-star" checked="">
-              <label class="modal__star" for="chars">
+              <label class="modal__star" for="1-star">
                 <svg width="27" height="27">
                   <use xlink:href="img/sprite.svg#icon-star-big"></use>
                 </svg>
               </label>
               <input class="visually-hidden" type="radio" name="stars" id="2-star" checked="">
-              <label class="modal__star" for="chars">
+              <label class="modal__star" for="2-star">
                 <svg width="27" height="27">
                   <use xlink:href="img/sprite.svg#icon-star-big"></use>
                 </svg>
               </label>
               <input class="visually-hidden" type="radio" name="stars" id="3-star" checked="">
-              <label class="modal__star" for="chars">
+              <label class="modal__star" for="3-star">
                 <svg width="27" height="27">
                   <use xlink:href="img/sprite.svg#icon-star-big"></use>
                 </svg>
               </label>
               <input class="visually-hidden" type="radio" name="stars" id="4-star" checked="">
-              <label class="modal__star" for="chars">
+              <label class="modal__star" for="4-star">
                 <svg width="27" height="27">
                   <use xlink:href="img/sprite.svg#icon-star-big"></use>
                 </svg>
               </label>
               <input class="visually-hidden" type="radio" name="stars" id="5-star" checked="">
-              <label class="modal__star" for="chars">
+              <label class="modal__star" for="5-star">
                 <svg width="27" height="27">
                   <use xlink:href="img/sprite.svg#icon-star-big"></use>
                 </svg>
@@ -310,11 +310,12 @@
       </div>
     </article>
   </template>
-  <script src="js/map.js" type="text/javascript"></script>
+   <script src="js/map.js" type="text/javascript"></script>
   <script src="js/tabs.js"></script>
-  <script src="js/generate-review.js"></script>
+  <!--
+  <script src="js/generate-review.js"></script> -->
   <script src="js/modal.js"></script>
-  <script>
+  <!-- <script>
 		var galleryThumbs = new Swiper('.gallery-thumbs', {
       slidesPerView: 4,
       freeMode: false,
@@ -333,6 +334,6 @@
         swiper: galleryThumbs
       }
     });
-	</script>
+	</script> -->
 </body>
 </html>

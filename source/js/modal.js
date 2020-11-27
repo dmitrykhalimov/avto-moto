@@ -3,7 +3,7 @@
 (function () {
   var state = {
     selectedStar: 3,
-    hoveredStar: 0,
+    hoveredStar: 1,
   };
 
   var modal = document.querySelector('.modal');
@@ -50,7 +50,6 @@
   var onFormSubmit = function (evt) {
     evt.preventDefault();
     var content = document.querySelector('.reviews');
-
     var dataToRender = {
       name: nameField.value,
       pros: prosField.value,
