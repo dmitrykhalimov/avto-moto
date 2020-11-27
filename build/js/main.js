@@ -328,3 +328,7 @@
     }
   });
 })();
+
+(function () {
+  window.svg4everybody();
+})();
