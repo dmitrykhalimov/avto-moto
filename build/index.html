@@ -36,7 +36,7 @@
   </header>
   <main class="page__main">
     <h1 class="visually-hidden">Карточка автомобиля Марпех 11</h1>
-    <div class="container page__main--container">
+    <div class="page__main-container container">
       <section class="slider">
         <h2 class="visually-hidden">Фотографии автомобиля</h2>
         <div class="swiper-container gallery-top slider__main">
@@ -123,11 +123,11 @@
         <h2 class="visually-hidden">Основная информация</h2>
         <ul class="tabs">
           <li>
-            <input class="visually-hidden" type="radio" name="category" id="chars">
+            <input class="visually-hidden" type="radio" name="category" id="chars" checked="">
             <label class="button button--radio" for="chars">Характеристики</label>
           </li>
           <li>
-            <input class="visually-hidden" type="radio" name="category" id="reviews" checked="">
+            <input class="visually-hidden" type="radio" name="category" id="reviews">
             <label class="button button--radio" for="reviews">Отзывы</label>
           </li>
           <li>
@@ -135,7 +135,7 @@
             <label class="button button--radio" for="contacts">Контакты</label>
           </li>
         </ul>
-        <section class="chars visually-hidden">
+        <section class="chars">
           <h2 class="visually-hidden">Полные технические характеристики</h2>
           <dl class="chars__list">
             <dt>Трансмиссия</dt>
@@ -154,7 +154,7 @@
             <dd>4</dd>
           </dl>
         </section>
-        <section class="reviews">
+        <section class="reviews visually-hidden">
           <h2 class="visually-hidden">Отзывы</h2>
           <button class="reviews__add-review button button--white">Оставить отзыв</button>
           <article class="reviews__review">

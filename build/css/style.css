@@ -951,7 +951,7 @@ template {
 .page__main {
   padding-top: 75px; }
 
-.page__main--container {
+.page__main-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -995,10 +995,7 @@ template {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 435px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between; }
+  width: 435px; }
 
 .slider__thumbnails-block {
   display: -webkit-box;
@@ -1020,8 +1017,10 @@ template {
 
 .slider__prev,
 .slider__next {
+  position: relative;
   cursor: pointer;
-  stroke: #48494d; }
+  stroke: #48494d;
+  z-index: 2; }
 
 .slider__disabled {
   cursor: default;
@@ -1179,7 +1178,7 @@ template {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-top: 10px;
+  margin-top: 5px;
   width: 565px; }
 
 .chars dd,
@@ -1211,7 +1210,6 @@ template {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 30px;
   font-size: 20px;
   line-height: 27px;
   -webkit-user-select: none;
@@ -1221,12 +1219,13 @@ template {
 
 .tabs label {
   width: 194px;
-  height: 50px; }
+  height: 50px;
+  color: #48494d; }
 
 .content {
   margin-top: 90px;
   margin-left: 5px;
-  padding-bottom: 140px;
+  padding-bottom: 125px;
   width: 100%; }
 
 .reviews {
@@ -1236,7 +1235,8 @@ template {
   padding-right: 10px;
   width: 100%;
   font-size: 15px;
-  line-height: 20px; }
+  line-height: 20px;
+  margin-top: 25px; }
 
 .reviews button {
   position: absolute;
@@ -1332,7 +1332,8 @@ template {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%; }
+  width: 100%;
+  margin-top: 25px; }
 
 .contacts__map {
   width: 431px;
@@ -1576,12 +1577,13 @@ input:checked + .button--radio {
   padding-left: 25px;
   padding-top: 15px;
   width: 300px;
-  height: 118px;
+  height: 117px;
   font-weight: normal;
   font-size: 14px;
   line-height: 19px;
   color: #48494d;
-  border: 1px solid rgba(72, 73, 77, 0.2); }
+  border: 1px solid rgba(72, 73, 77, 0.2);
+  resize: none; }
 
 .modal__value {
   -webkit-box-sizing: border-box;

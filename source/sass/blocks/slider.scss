@@ -21,7 +21,6 @@
 .slider__thumbnails {
   display: flex;
   width: 435px;
-  justify-content: space-between;
 }
 
 .slider__thumbnails-block {
@@ -43,8 +42,10 @@
 
 .slider__prev,
 .slider__next {
+  position: relative;
   cursor: pointer;
   stroke: $black;
+  z-index: 2;
 }
 
 .slider__disabled {

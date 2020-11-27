@@ -39,6 +39,7 @@
     if (activeTab === selectedName) {
       return;
     }
+
     activeTab = selectedName;
     [].forEach.call(contents, function (content) {
       if (content.classList.contains(selectedName)) {
