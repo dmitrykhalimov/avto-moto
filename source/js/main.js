@@ -307,7 +307,8 @@
 (function () {
   // eslint-disable-next-line no-undef
   var galleryThumbs = new Swiper('.gallery-thumbs', {
-    slidesPerView: 4,
+    slidesPerView: 3,
+    spaceBetween: 20,
     freeMode: false,
     watchSlidesVisibility: true,
     watchSlidesProgress: true,
