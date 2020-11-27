@@ -2,7 +2,7 @@
 
 (function () {
   var state = {
-    selectedStar: 3,
+    selectedStar: 1,
     hoveredStar: 1,
   };
 
@@ -28,7 +28,7 @@
   };
 
   var drawStars = function (index) {
-    for (var i = 0; i <= index; i++) {
+    for (var i = 0; i < index; i++) {
       starLabels[i].classList.add('modal__star--selected');
     }
   };
@@ -39,12 +39,12 @@
   };
 
   var onMouseEnter = function (evt) {
-    state.hoveredStar = findStar(evt.target);
+    state.hoveredStar = findStar(evt.target) + 1;
     drawStars(state.hoveredStar);
   };
 
   var onStarSelect = function (evt) {
-    state.selectedStar = findStar(evt.currentTarget);
+    state.selectedStar = findStar(evt.currentTarget) + 1;
   };
 
   var onFormSubmit = function (evt) {
@@ -91,6 +91,7 @@
 
   var onOpenModal = function () {
     modal.classList.remove('visually-hidden');
+    drawStars(state.selectedStar);
   };
 
   var onCloseButtonClick = function () {
