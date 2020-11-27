@@ -2,23 +2,24 @@
   box-sizing: border-box;
   position: relative;
 
-  //@include outline;
+  padding-right: 10px;
+
   width: 100%;
 
   font-size: 15px;
   line-height: 20px;
-  padding-right: 10px;
 }
 
 .reviews button {
   position: absolute;
   top: 0;
   right: 10px;
+
   width: 189px;
   height: 52px;
+
   font-size: 14px;
   line-height: 19px;
-
   text-align: center;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -28,6 +29,7 @@
 .reviews b {
   padding: 0;
   margin: 0;
+
   font-size: 20px;
   line-height: 27px;
   font-weight: 600;
@@ -43,6 +45,7 @@
   margin: 0;
   padding: 0;
   margin-bottom: 5px;
+
   color: #000000;
   font-weight: 600;
   font-size: 15px;

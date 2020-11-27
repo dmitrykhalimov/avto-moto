@@ -1,27 +1,33 @@
 .chars__list {
-  margin-top: 10px;
   display: flex;
   flex-wrap: wrap;
+
+  margin-top: 10px;
+
   width: 565px;
 }
 
 .chars dd,
 .chars dt {
-  display: block;
   box-sizing: border-box;
+
+  display: block;
+
   margin: 0;
   padding: 0;
   padding-top: 20px;
+
+  height: 50px;
+
   font-size: 16px;
   line-height: 22px;
-  height: 50px;
+
   border-bottom: 1px solid $gray-border;
 }
 
 .chars dd {
-
-
   width: 50%;
+
   color: $black;
 }
 

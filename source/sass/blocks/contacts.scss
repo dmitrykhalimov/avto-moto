@@ -1,6 +1,7 @@
 .contacts {
-  width: 100%;
   display: flex;
+
+  width: 100%;
 }
 
 
@@ -10,11 +11,13 @@
 }
 
 .contacts__list {
-  margin: 0;
-  width: 274px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  margin: 0;
+
+  width: 274px;
 }
 
 .contacts img {
@@ -23,6 +26,7 @@
 
 .contacts__list dd {
   margin: 0;
+
   color: #1a212f;
   font-weight: bold;
   font-size: 16px;
@@ -31,9 +35,10 @@
 
 .contacts__list dt {
   margin: 0;
+  margin-bottom: 10px;
+
   color: #000000;
   font-weight: 600;
   font-size: 14px;
   line-height: 19px;
-  margin-bottom: 10px;
 }

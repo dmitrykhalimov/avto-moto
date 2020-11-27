@@ -1,5 +1,4 @@
 .slider {
-  // @include outline;
   width: 600px;
   margin-top: 15px;
 }
@@ -45,12 +44,12 @@
 .slider__prev,
 .slider__next {
   cursor: pointer;
-  stroke: #48494d;
+  stroke: $black;
 }
 
 .slider__disabled {
   cursor: default;
-  stroke: #d7d9df;
+  stroke: $gray-border;
 }
 
 .slider__next {

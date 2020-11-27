@@ -1,9 +1,12 @@
 .tabs {
   @include list-reset;
+
   display: flex;
+
+  margin-bottom: 30px;
+
   font-size: 20px;
   line-height: 27px;
-  margin-bottom: 30px;
   user-select: none;
 }
 

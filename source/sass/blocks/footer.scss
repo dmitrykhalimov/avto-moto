@@ -6,9 +6,11 @@
   @include list-reset;
   display: flex;
   justify-content: space-between;
-  min-height: 82px;
+
   padding-left: 10px;
   padding-right: 10px;
+
+  min-height: 82px;
 }
 
 .footer__nav-item {

@@ -1,11 +1,13 @@
 .main-nav__list {
   @include list-reset;
-  // @include outline(green);
+
   display: flex;
-  width: 518px;
+  justify-content: space-between;
+
   margin-right: 7px;
   margin-top: 30px;
-  justify-content: space-between;
+
+  width: 518px;
 }
 
 .main-nav__item a {

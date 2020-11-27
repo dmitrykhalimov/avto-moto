@@ -70,7 +70,9 @@
 
 (function () {
   var reviewTemplate = document.querySelector('#tempalte-review').content;
-
+  if (!reviewTemplate) {
+    return;
+  }
 
   var createReview = function (reviewData) {
     var review = reviewTemplate.cloneNode(true);
@@ -325,4 +327,3 @@
     }
   });
 })();
-
