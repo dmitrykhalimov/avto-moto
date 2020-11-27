@@ -107,6 +107,10 @@
   position: relative;
 }
 
+.modal__input-required:invalid {
+  outline: 2px solid green;
+}
+
 .modal__required::before {
   position: absolute;
   content: "*";

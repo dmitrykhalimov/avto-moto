@@ -229,15 +229,15 @@
       </ul>
     </div>
   </footer>
-  <section class="modal visually-hidden">
+  <section class="modal">
     <div class="modal__container">
       <h2>Оставить отзыв</h2>
       <button class="modal__close"></button>
       <form class="modal__form" method="post">
         <fieldset class="modal__fieldset">
           <div class="modal__required">
-            <span>Пожалуйста, заполните поле</span>
-            <input class="modal__required" type="text" name="name" id="name" placeholder="Имя">
+            <span class="visually-hidden">Пожалуйста, заполните поле</span>
+            <input class="modal__input-required" type="text" name="name" id="name" placeholder="Имя" required>
           </div>
           <input type="text" name="pros" id="pros" placeholder="Достоинства">
           <input type="text" name="contras" id="contras" placeholder="Недостатки">
@@ -314,7 +314,7 @@
   <script src="js/tabs.js"></script>
   <script src="js/generate-review.js"></script>
   <script src="js/modal.js"></script>
-  <!-- <script>
+  <script>
 		var galleryThumbs = new Swiper('.gallery-thumbs', {
       slidesPerView: 4,
       freeMode: false,
@@ -333,6 +333,6 @@
         swiper: galleryThumbs
       }
     });
-	</script> -->
+	</script>
 </body>
 </html>

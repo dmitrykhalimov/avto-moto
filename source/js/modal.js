@@ -1,6 +1,8 @@
 'use strict';
 
 (function () {
+  // ES5 порождает фрустрацию и огромные модули
+
   var state = {
     selectedStar: 1,
     hoveredStar: 1,
@@ -61,7 +63,7 @@
     var newReview = window.generateReview.create(dataToRender);
     content.insertBefore(newReview, content.firstElementChild);
 
-    closeModal();
+    closeModal(true);
   };
 
   var onFormExit = function () {
@@ -89,28 +91,69 @@
     handleLabelHover(starLabels[i]);
   }
 
-  var onOpenModal = function () {
-    modal.classList.remove('visually-hidden');
-    drawStars(state.selectedStar);
-  };
+  // Валидация формы
 
-  var onCloseButtonClick = function () {
-    closeModal();
-  };
+  var testedInput = document.querySelector('.modal__input-required');
+  console.log(testedInput);
+  testedInput.value = 'Пипкин';
+  console.log(testedInput.validity);
 
-  var closeModal = function () {
+  // функции открытия-закрытия модального окна
+  var closeModal = function (isFinished) {
     modal.classList.add('visually-hidden');
+
+    if (!isFinished) {
+      return;
+    }
 
     nameField.value = '';
     prosField.value = '';
     contrasField.value = '';
     commentField.value = '';
+    state = {
+      selectedStar: 1,
+      hoveredStar: 1,
+    };
+
+    closeButton.removeEventListener('click', onCloseButtonClick);
+    modal.removeEventListener('click', onOverlayClick);
+    document.removeEventListener('keydown', onEscKeyDown);
+  };
+
+  var openModal = function () {
+    modal.classList.remove('visually-hidden');
+    drawStars(state.selectedStar);
+
+    closeButton.addEventListener('click', onCloseButtonClick);
+    modal.addEventListener('click', onOverlayClick);
+    document.addEventListener('keydown', onEscKeyDown);
+  };
+
+  // обработчики открытия-закрытия формы
+  var closeButton = modal.querySelector('.modal__close');
+
+  var onOverlayClick = function (evt) {
+    if (evt.target !== modal) {
+      return;
+    }
+    closeModal(false);
+  };
+
+  var onEscKeyDown = function (evt) {
+    if (evt.key === 'Escape') {
+      evt.preventDefault();
+      closeModal(false);
+    }
+  };
+
+  var onCloseButtonClick = function () {
+    closeModal(false);
+  };
+
+  var onOpenModal = function () {
+    openModal();
   };
 
   var openButton = document.querySelector('.reviews__add-review');
   openButton.addEventListener('click', onOpenModal);
-
-  var closeButton = modal.querySelector('.modal__close');
-  closeButton.addEventListener('click', onCloseButtonClick);
-
 })();
