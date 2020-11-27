@@ -78,8 +78,8 @@
     var review = reviewTemplate.cloneNode(true);
 
     review.querySelector('b').textContent = reviewData.name;
-    review.querySelector('dt').textContent = reviewData.pros;
-    review.querySelector('dt:last-of-type').textContent = reviewData.contras;
+    review.querySelector('dd').textContent = reviewData.pros;
+    review.querySelector('dd:last-of-type').textContent = reviewData.contras;
     review.querySelector('p').textContent = reviewData.comment;
 
     [].forEach.call(review.querySelectorAll('img'), function (image, index) {
