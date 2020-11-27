@@ -26,6 +26,13 @@
   letter-spacing: 0.12em;
   text-transform: uppercase;
   font-weight: 600;
+
+  cursor: pointer;
+}
+
+.reviews button:hover {
+  color: $white;
+  background-color: $red;
 }
 
 .reviews b {

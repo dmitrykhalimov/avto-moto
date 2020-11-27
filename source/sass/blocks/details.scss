@@ -109,6 +109,7 @@
 }
 
 .details__button {
+  cursor: pointer;
   font-weight: 600;
   font-size: 14px;
   line-height: 19px;
@@ -129,4 +130,13 @@
 
   width: 222px;
   height: 52px;
+}
+
+.details__button--ask:hover {
+  background-color: #bd0c21;
+}
+
+.details__button--credit:hover {
+  background-color: $red;
+  color: white;
 }

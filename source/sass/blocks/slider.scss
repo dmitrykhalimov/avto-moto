@@ -23,6 +23,10 @@
   width: 435px;
 }
 
+.slider__thumbnails img {
+  cursor: pointer;
+}
+
 .slider__thumbnails-block {
   display: flex;
   justify-content: space-between;

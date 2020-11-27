@@ -50,6 +50,7 @@
 }
 
 .modal__star {
+  cursor: pointer;
   fill: $dark-gray;
 }
 
@@ -97,6 +98,12 @@
 
   border: none;
   background: url("../../img/icon-close.svg") 0 0 no-repeat;
+
+  cursor: pointer;
+}
+
+.modal__close:hover {
+  opacity: 0.7;
 }
 
 .modal__required {
@@ -199,4 +206,9 @@
   text-align: center;
   letter-spacing: 0.12em;
   text-transform: uppercase;
+  cursor: pointer;
+}
+
+.modal__submit:hover {
+  background-color: #bd0c21;
 }

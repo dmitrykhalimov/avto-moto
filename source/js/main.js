@@ -101,8 +101,8 @@
   // ES5 порождает фрустрацию и огромные модули
 
   var state = {
-    selectedStar: 1,
-    hoveredStar: 1,
+    selectedStar: 0,
+    hoveredStar: 0,
   };
 
   var nameField = document.querySelector('#name');
@@ -207,8 +207,8 @@
     contrasField.value = '';
     commentField.value = '';
     state = {
-      selectedStar: 1,
-      hoveredStar: 1,
+      selectedStar: 0,
+      hoveredStar: 0,
     };
 
     cleanStars();

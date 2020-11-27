@@ -13,3 +13,13 @@
   height: 50px;
   color: $black;
 }
+
+.tabs label:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.tabs input:checked + label:hover {
+  background-color: #bd0c21;
+  opacity: 1;
+}
