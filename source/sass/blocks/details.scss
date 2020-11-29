@@ -74,22 +74,22 @@
 
 .details__prices span {
   display: inline-block;
+  vertical-align: middle;
   color: $black;
 }
 
-.details__prices span:nth-child(1) {
+.details__price--current {
   font-weight: bold;
   font-size: 35px;
   line-height: 48px;
   margin-top: 1px;
 }
 
-.details__prices span:nth-child(2) {
+.details__price--old {
   position: relative;
-  vertical-align: top;
 
   margin-left: 31px;
-  margin-top: 12px;
+  margin-top: 7px;
 
   font-weight: normal;
   font-size: 20px;
@@ -97,7 +97,7 @@
   opacity: 0.5;
 }
 
-.details__prices span:nth-child(2)::before {
+.details__price--old::before {
   position: absolute;
   content: "";
   top: 13px;

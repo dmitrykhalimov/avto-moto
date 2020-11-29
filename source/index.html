@@ -15,7 +15,12 @@
 <body class="page">
   <header class="header">
     <div class="container header__container">
-      <img src="img/logo-desktop.png" width="134" height="55" alt="Магазин Авто-Мото">
+      <picture>
+        <source type="image/webp" srcset="img/logo-desktop.webp 1x, img/logo-desktop@2x.webp 2x">
+        <source srcset="img/logo-desktop@2x.png 2x">
+        <!-- 1х: 134px; 2x: 268px -->
+        <img src="img/logo-desktop.png" width="134" height="55" alt="Магазин Авто-Мото">
+      </picture>
       <nav class="main-nav">
         <ul class="main-nav__list">
           <li class="main-nav__item">
@@ -44,24 +49,30 @@
             <div class="swiper-slide">
               <span class="button button--red">New Model</span>
               <picture>
-                <source type="image/webp" srcset="img/slide1-@1x.webp">
+                <source type="image/webp" srcset="img/slide1-@1x.webp 1x, img/slide1-@2x.webp 2x,">
+                <source srcset="img/slide1-@2x.jpg 2x">
 
+                  <!-- 1х: 600px; 2x: 1200px -->
                 <img src="img/slide1-@1x.jpg" alt="Марпех 11 фото" width="600" height="375">
               </picture>
             </div>
             <div class="swiper-slide">
               <span class="button button--red">New Model</span>
               <picture>
-                <source type="image/webp" srcset="img/slide2-@1x.webp">
+                <source type="image/webp" srcset="img/slide2-@1x.webp 1x, img/slide2-@2x.webp 2x,">
+                <source srcset="img/slide2-@2x.jpg 2x">
 
+                <!-- 1х: 600px; 2x: 1200px -->
                 <img src="img/slide2-@1x.jpg" alt="Марпех 11 фото" width="600" height="375">
               </picture>
             </div>
             <div class="swiper-slide">
               <span class="button button--red">New Model</span>
               <picture>
-                <source type="image/webp" srcset="img/slide3-@1x.webp">
+                <source type="image/webp" srcset="img/slide3-@1x.webp 1x, img/slide3-@2x.webp 2x,">
+                <source srcset="img/slide3-@2x.jpg 2x">
 
+                <!-- 1х: 600px; 2x: 1200px -->
                 <img src="img/slide3-@1x.jpg" alt="Марпех 11 фото" width="600" height="375">
               </picture>
             </div>
@@ -75,13 +86,34 @@
           </button>
           <div class="slider__thumbnails">
             <div class="swiper-slide">
-              <img src="img/slide1-tn.jpg" width="128" height="80" alt="Марпех 11 фото">
+              <picture>
+                <source type="image/webp" srcset="img/slide1-tn.webp 1x, img/slide1-tn@2x.webp 2x,">
+                <source srcset="img/slide1-tn.jpg 2x">
+
+                <!-- 1х: 128px; 2x: 256px -->
+                <img src="img/slide1-tn.jpg" width="128" height="80" alt="Марпех 11 фото">
+              </picture>
+
             </div>
             <div class="swiper-slide">
-              <img src="img/slide2-tn.jpg" width="128" height="80" alt="Марпех 11 фото">
+              <picture>
+                <source type="image/webp" srcset="img/slide2-tn.webp 1x, img/slide2-tn@2x.webp 2x,">
+                <source srcset="img/slide2-tn.jpg 2x">
+
+                <!-- 1х: 128px; 2x: 256px -->
+                <img src="img/slide2-tn.jpg" width="128" height="80" alt="Марпех 11 фото">
+              </picture>
+
             </div>
             <div class="swiper-slide">
-              <img src="img/slide3-tn.jpg" width="128" height="80" alt="Марпех 11 фото">
+              <picture>
+                <source type="image/webp" srcset="img/slide3-tn.webp 1x, img/slide3-tn@2x.webp 2x,">
+                <source srcset="img/slide3-tn.jpg 2x">
+
+                <!-- 1х: 128px; 2x: 256px -->
+                <img src="img/slide3-tn.jpg" width="128" height="80" alt="Марпех 11 фото">
+              </picture>
+
             </div>
           </div>
           <button class="slider__next">
@@ -109,8 +141,8 @@
           </li>
         </ul>
         <div class="details__prices">
-          <span>2 300 000 Р</span>
-          <span>2 400 000 Р</span>
+          <span class="details__price details__price--current">2 300 000 Р</span>
+          <span class="details__price details__price--old">2 400 000 Р</span>
         </div>
         <button class="details__button details__button--ask button button--red" type="button">
           Оставить заявку
@@ -168,11 +200,21 @@
             <h3>Комментарий</h3>
             <p>Взяли по трейд-ин, на выгодных условиях у дилера. Стильная внешка и крут по базовым характеристикам. Не думал, что пересяду на китайский автопром, но сейчас гоняю и понимаю, что полностью доволен.</p>
             <div class="reviews__stars">
-              <img src="./img/icon-star-red.svg" width="17" height="17" alt="star">
-              <img src="./img/icon-star-red.svg" width="17" height="17" alt="star">
-              <img src="./img/icon-star-red.svg" width="17" height="17" alt="star">
-              <img src="./img/icon-star-gray.svg" width="17" height="17" alt="star">
-              <img src="./img/icon-star-gray.svg" width="17" height="17" alt="star">
+              <svg width="17" height="17">
+                <use xlink:href="img/sprite.svg#icon-star-red"></use>
+              </svg>
+              <svg width="17" height="17">
+                <use xlink:href="img/sprite.svg#icon-star-red"></use>
+              </svg>
+              <svg width="17" height="17">
+                <use xlink:href="img/sprite.svg#icon-star-red"></use>
+              </svg>
+              <svg width="17" height="17">
+                <use xlink:href="img/sprite.svg#icon-star-gray"></use>
+              </svg>
+              <svg width="17" height="17">
+                <use xlink:href="img/sprite.svg#icon-star-gray"></use>
+              </svg>
               <span>Советует</span>
             </div>
             <div class="reviews__reply">
@@ -191,11 +233,21 @@
             <h3>Комментарий</h3>
             <p>Дизайн отличный, управление просто шикарно, ощущения за рулём такой машины особые. Но ремонт очень дорогой. Пару месяцев назад пришлось менять двигатель. По стоимости вышло как новый автомобиль. Так что, если покупать эту машину, надо быть готовым к большим расходам на обслуживание.</p>
             <div class="reviews__stars">
-              <img src="./img/icon-star-red.svg" width="17" height="17" alt="star">
-              <img src="./img/icon-star-red.svg" width="17" height="17" alt="star">
-              <img src="./img/icon-star-red.svg" width="17" height="17" alt="star">
-              <img src="./img/icon-star-gray.svg" width="17" height="17" alt="star">
-              <img src="./img/icon-star-gray.svg" width="17" height="17" alt="star">
+              <svg width="17" height="17">
+                <use xlink:href="img/sprite.svg#icon-star-red"></use>
+              </svg>
+              <svg width="17" height="17">
+                <use xlink:href="img/sprite.svg#icon-star-red"></use>
+              </svg>
+              <svg width="17" height="17">
+                <use xlink:href="img/sprite.svg#icon-star-red"></use>
+              </svg>
+              <svg width="17" height="17">
+                <use xlink:href="img/sprite.svg#icon-star-gray"></use>
+              </svg>
+              <svg width="17" height="17">
+                <use xlink:href="img/sprite.svg#icon-star-gray"></use>
+              </svg>
               <span>Советует</span>
             </div>
             <div class="reviews__reply">
@@ -217,7 +269,7 @@
             <dd>info@avto-moto.ru</dd>
           </dl>
           <div class="contacts__container">
-            <div class="contacts__map" id="map"></div>
+          <div class="contacts__map" id="map"></div>
           </div>
         </section>
       </section>
@@ -318,11 +370,21 @@
       <h3>Комментарий</h3>
       <p></p>
       <div class="reviews__stars">
-        <img src="./img/icon-star-red.svg" width="17" height="17" alt="star">
-        <img src="./img/icon-star-red.svg" width="17" height="17" alt="star">
-        <img src="./img/icon-star-red.svg" width="17" height="17" alt="star">
-        <img src="./img/icon-star-gray.svg" width="17" height="17" alt="star">
-        <img src="./img/icon-star-gray.svg" width="17" height="17" alt="star">
+        <svg width="17" height="17">
+          <use xlink:href="img/sprite.svg#icon-star-red"></use>
+        </svg>
+        <svg width="17" height="17">
+          <use xlink:href="img/sprite.svg#icon-star-red"></use>
+        </svg>
+        <svg width="17" height="17">
+          <use xlink:href="img/sprite.svg#icon-star-red"></use>
+        </svg>
+        <svg width="17" height="17">
+          <use xlink:href="img/sprite.svg#icon-star-gray"></use>
+        </svg>
+        <svg width="17" height="17">
+          <use xlink:href="img/sprite.svg#icon-star-gray"></use>
+        </svg>
         <span>Советует</span>
       </div>
       <div class="reviews__reply">
