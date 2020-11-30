@@ -323,7 +323,7 @@
         pros: prosField.value,
         contras: contrasField.value,
         comment: commentField.value,
-        stars: state.selectedStar,
+        stars: localStorage.getItem('star'),
       };
 
       var newReview = window.generateReview.create(dataToRender);
