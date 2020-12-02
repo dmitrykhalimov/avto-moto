@@ -353,7 +353,7 @@
       wrapperClass: 'slider__thumbnails'
     });
 
-    var galleryTop = new window.Swiper('.gallery-top', {
+    window.gallerySwiper = new window.Swiper('.gallery-top', {
       spaceBetween: 10,
       navigation: {
         nextEl: '.slider__next',

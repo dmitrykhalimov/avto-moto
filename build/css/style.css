@@ -1115,16 +1115,16 @@ template {
   height: 40px; }
 
 .details__char--fuel::before {
-  background: url("../../img/icon-engine.svg"); }
+  background: url("../img/icon-engine.svg"); }
 
 .details__char--transmission::before {
-  background: url("../../img/icon-transmission.svg"); }
+  background: url("../img/icon-transmission.svg"); }
 
 .details__char--power::before {
-  background: url("../../img/icon-power.svg"); }
+  background: url("../img/icon-power.svg"); }
 
 .details__char--engine::before {
-  background: url("../../img/icon-volume.svg"); }
+  background: url("../img/icon-volume.svg"); }
 
 .details__prices {
   margin-top: 35px; }
@@ -1569,7 +1569,7 @@ input:checked + .button--radio {
   width: 15px;
   height: 15px;
   border: none;
-  background: url("../../img/icon-close.svg") 0 0 no-repeat;
+  background: url("../img/icon-close.svg") 0 0 no-repeat;
   cursor: pointer; }
 
 .modal__close:hover {

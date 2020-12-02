@@ -305,15 +305,15 @@
   <section class="modal visually-hidden">
     <div class="modal__container">
       <h2>Оставить отзыв</h2>
-      <button class="modal__close"></button>
+      <button class="modal__close" aria-label="Close modal"></button>
       <form class="modal__form" method="post">
         <fieldset class="modal__fieldset">
           <div class="modal__required modal__required__test">
             <span class="visually-hidden">Пожалуйста, заполните поле</span>
-            <input class="modal__input" type="text" name="name" id="name" placeholder="Имя" required="">
+            <input class="modal__input" type="text" name="name" id="name" placeholder="Имя" aria-label="Имя пользователя" required="">
           </div>
-          <input type="text" name="pros" id="pros" placeholder="Достоинства">
-          <input type="text" name="contras" id="contras" placeholder="Недостатки">
+          <input type="text" name="pros" id="pros" placeholder="Достоинства" aria-label="Достоинства">
+          <input type="text" name="contras" id="contras" placeholder="Недостатки" aria-label="Недостатки">
           <div class="modal__value">
             <span>Оцените товар:</span>
             <fieldset class="modal__stars">
@@ -351,7 +351,7 @@
           </div>
           <div class="modal__required">
             <span class="visually-hidden">Пожалуйста, заполните поле</span>
-            <textarea class="modal__input" placeholder="Комментарий" name="comment" id="comment" required=""></textarea>
+            <textarea class="modal__input" placeholder="Комментарий" name="comment" id="comment" required="" aria-label="Текст комментария"></textarea>
           </div>
         </fieldset>
         <button class="modal__submit button button--red">Оставить отзыв</button>
