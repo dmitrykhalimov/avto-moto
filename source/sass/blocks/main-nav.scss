@@ -1,10 +1,10 @@
 .main-nav__list {
   @include list-reset;
-
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
 
-  margin-right: 7px;
+  flex-wrap: wrap;
+
   margin-top: 30px;
 
   width: 518px;
@@ -13,6 +13,14 @@
 .main-nav__item a {
   @include menu;
   text-decoration: none;
+}
+
+.main-nav__item {
+  margin-right: 68px;
+}
+
+.main-nav__item:nth-of-type(4n) {
+  margin-right: 0;
 }
 
 .main-nav__item a:hover {

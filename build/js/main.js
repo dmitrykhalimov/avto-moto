@@ -190,6 +190,8 @@
     // функции открытия-закрытия модального окна
     var openModal = function () {
       modal.classList.remove('visually-hidden');
+      document.body.style.overflow = 'hidden';
+
       drawStars(localStorage.getItem('star'));
 
       closeButton.addEventListener('click', onCloseButtonClick);
@@ -207,6 +209,8 @@
 
     var closeModal = function (isFinished) {
       modal.classList.add('visually-hidden');
+
+      document.body.style.overflow = 'auto';
 
       if (isFinished) {
         localStorage.clear();

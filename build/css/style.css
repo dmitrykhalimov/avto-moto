@@ -1045,10 +1045,11 @@ template {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-right: 7px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin-top: 30px;
   width: 518px; }
 
@@ -1060,6 +1061,12 @@ template {
   line-height: 22px;
   color: #48494d;
   text-decoration: none; }
+
+.main-nav__item {
+  margin-right: 68px; }
+
+.main-nav__item:nth-of-type(4n) {
+  margin-right: 0; }
 
 .main-nav__item a:hover {
   opacity: 0.7; }
@@ -1360,6 +1367,10 @@ template {
   display: flex;
   width: 100%;
   margin-top: 25px; }
+
+.contacts a {
+  text-decoration: none;
+  color: #000000; }
 
 .contacts__map {
   width: 431px;
