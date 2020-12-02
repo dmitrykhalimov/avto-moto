@@ -368,7 +368,3 @@
     return;
   }
 })();
-
-(function () {
-  window.svg4everybody();
-})();
