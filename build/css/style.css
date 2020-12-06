@@ -1371,6 +1371,8 @@ template {
 .contacts a {
   text-decoration: none;
   color: #000000; }
+  .contacts a:hover {
+    opacity: 0.7; }
 
 .contacts__map {
   width: 431px;
